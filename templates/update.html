@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add Post - Masterblog</title>
+    <title>Update Post - Masterblog</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Add New Blog Post</h1>
-    <form method="POST" action="{{ url_for('add') }}">
+    <h1>Update Blog Post</h1>
+    <form method="POST" action="{{ url_for('update', post_id=post.id) }}">
         <div class="form-group">
             <label for="author">Author:</label>
-            <input type="text" id="author" name="author" required>
+            <input type="text" id="author" name="author" value="{{ post.author }}" required>
         </div>
         <div class="form-group">
             <label for="title">Title:</label>
-            <input type="text" id="title" name="title" required>
+            <input type="text" id="title" name="title" value="{{ post.title }}" required>
         </div>
         <div class="form-group">
             <label for="content">Content:</label>
-            <textarea id="content" name="content" rows="6" required></textarea>
+            <textarea id="content" name="content" rows="6" required>{{ post.content }}</textarea>
         </div>
         <div class="form-actions">
-            <button type="submit" class="btn submit-btn">Create Post</button>
+            <button type="submit" class="btn update-btn">Update Post</button>
             <a href="{{ url_for('index') }}" class="btn cancel-btn">Cancel</a>
         </div>
     </form>

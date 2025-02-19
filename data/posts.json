@@ -3,12 +3,21 @@
         "id": 1,
         "author": "John Doe",
         "title": "First Post",
-        "content": "This is my first post."
+        "content": "Welcome to my blog!",
+        "likes": 4
     },
     {
         "id": 2,
-        "author": "Jane Doe",
-        "title": "Second Post",
-        "content": "This is another post."
+        "author": "Jane Smith",
+        "title": "Learning Flask",
+        "content": "Building web applications with Python!???",
+        "likes": 5
+    },
+    {
+        "id": 3,
+        "author": "RT",
+        "title": "new post",
+        "content": "pupipupipu",
+        "likes": 0
     }
 ]

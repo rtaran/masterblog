@@ -3,6 +3,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    line-height: 1.6;
 }
 
 .post {
@@ -10,6 +11,7 @@ body {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
+    position: relative;
 }
 
 .author {
@@ -17,75 +19,106 @@ body {
     font-style: italic;
 }
 
-/* Add to existing CSS */
-.form-group {
-    margin-bottom: 15px;
+.post-info {
+    margin-top: 10px;
+    font-size: 0.9em;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
+.likes {
+    color: #ff69b4;
+    font-weight: bold;
 }
 
-input[type="text"], textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
+.btn {
+    padding: 8px 16px;
     border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-button {
+.new-post-btn {
     background: #4CAF50;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    margin-bottom: 20px;
 }
 
-button:hover {
+.new-post-btn:hover {
     background: #45a049;
 }
 
+.post-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 
-.new-post-link {
-    display: inline-block;
-    margin-bottom: 20px;
-    padding: 10px;
-    background: #4CAF50;
+.like-btn {
+    background: #ff69b4;
     color: white;
-    text-decoration: none;
-    border-radius: 4px;
+}
+
+.like-btn:hover {
+    background: #ff1493;
+}
+
+.update-btn {
+    background: #ffa500;
+    color: white;
+}
+
+.update-btn:hover {
+    background: #cc8400;
 }
 
 .delete-btn {
     background: #ff4444;
     color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-top: 10px;
 }
 
 .delete-btn:hover {
     background: #cc0000;
 }
 
-.post-actions {
-    margin-top: 10px;
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+.form-actions {
+    margin-top: 20px;
     display: flex;
     gap: 10px;
 }
 
-.update-btn {
-    background: #ffa500;
+.cancel-btn {
+    background: #666;
     color: white;
-    padding: 5px 10px;
-    text-decoration: none;
-    border-radius: 3px;
 }
 
-.update-btn:hover {
-    background: #cc8400;
+.cancel-btn:hover {
+    background: #444;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
 }
